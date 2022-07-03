@@ -17,6 +17,7 @@ jobs:
         port: 22
         script: |
           cd /opt/odoo15/projects/youssef/custom/
+          git clone https://github.com/yousabu/youssef_odoo.git
           chown -R root:root youssef_odoo
           cd /opt/odoo15/projects/youssef/custom/youssef_odoo
           git pull origin master
