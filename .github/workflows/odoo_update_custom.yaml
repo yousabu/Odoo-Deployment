@@ -13,7 +13,7 @@ jobs:
       with:
         host: 3.16.138.14
         username: youssef
-        password: 2856017
+        key: ${{ secrets.ODOO_SECRET }}
         port: 22
         script: |
           cd /opt/odoo15/projects/youssef/custom/youssef_odoo/
