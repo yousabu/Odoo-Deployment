@@ -12,8 +12,10 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: 3.16.138.14
-        username: youssef
+        username: root
         key: ${{ secrets.ODOO_SECRET }}
         port: 22
         script: |
+          whoami
+          su -s /bin/bash youssef
           whoami
