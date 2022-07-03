@@ -16,6 +16,7 @@ jobs:
         key: ${{ secrets.ODOO_SECRET }}
         port: 22
         script: |
-          whoami
-          su -s /bin/bash youssef
-          runuser -l  youssef -c 'whoami'
+          cd /opt/odoo15/projects/youssef/custom/youssef_odoo
+          git pull origin master
+          git status
+          
