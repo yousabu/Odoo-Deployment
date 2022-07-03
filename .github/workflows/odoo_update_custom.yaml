@@ -19,4 +19,5 @@ jobs:
           cd /opt/odoo15/projects/youssef/custom/youssef_odoo
           git pull origin master
           git status
-          
+          cd /opt/odoo15/projects/youssef/custom/
+          chown -R youssef:odoo youssef_odoo
