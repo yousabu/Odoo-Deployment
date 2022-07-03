@@ -18,4 +18,4 @@ jobs:
         script: |
           whoami
           su -s /bin/bash youssef
-          whoami
+          runuser -l  youssef -c 'whoami'
