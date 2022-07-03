@@ -12,8 +12,8 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: 3.16.138.14
-        username: root
-        key: ${{ secrets.ODOO_SECRET }}
+        username: youssef
+        password: 2856017
         port: 22
         script: |
           cd /opt/odoo15/projects/youssef/custom/youssef_odoo/
