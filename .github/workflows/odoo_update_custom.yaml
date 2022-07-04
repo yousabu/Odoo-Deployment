@@ -15,8 +15,4 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.ODOO_SECRET }}
         port: 22
-        script: |          
-          cd /opt/odoo15/projects/youssef/custom/youssef_odoo
-          git pull origin master
-          chown -R youssef:odoo youssef_odoo
-          systemctl restart youssef.service
+        script: ./home/ydeploy/deploy.sh
