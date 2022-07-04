@@ -15,4 +15,4 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.ODOO_SECRET }}
         port: 22
-        script: ./home/ydeploy/deploy.sh
+        script: /home/ydeploy/deploy.sh
