@@ -2,6 +2,8 @@ name: Pull In Custom
 on:
   push:
     branches: [ master ]
+  pull_request: 
+    branches: [ master ]
 jobs:
 
   pull:
@@ -13,6 +15,6 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
-        key: ${{ secrets.ODOO_SECRET }}
-        port: 22
+        key: ${{ secrets.YDEPLOY_SECRET }}
+        port: ${{ secrets.PORTS }}
         script: /home/ydeploy/deploy.sh
