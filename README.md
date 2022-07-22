@@ -5,6 +5,7 @@
 - Docker Compose
 - Nginx (Used as a reverse proxy)
 - Postgresql
+- Github Actions
 
 # Backup
 - Can Backup All Database And Flestore Wth Bash Script Run Cron Job
