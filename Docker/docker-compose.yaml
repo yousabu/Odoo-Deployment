@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  purp:
+    image: odoo:12.0
+    ports:
+      - "8069:8069"
+    restart: unless-stopped
+    volumes:
+    - ./odoo.conf:/etc/odoo/odoo.conf
+    - /root/dock/data:/var/lib/odoo
+    env_file:
+    - postgres.env
+
+volumes:
+  odoo_filestore:
+

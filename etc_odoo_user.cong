@@ -1,0 +1,48 @@
+[options]
+; This is the password that allows optbase operations:
+admin_passwd = pai1ugh2Choo6neechooQuie9
+
+db_host = false
+db_port = 5432
+db_user = youssef
+db_password = fei1bei9Iphuitiangi5eiji4
+
+addons_path = /opt/odoo15/addons,/opt/odoo15/projects/youssef/custom
+data_dir = /opt/odoo15/projects/youssef/data
+
+xmlrpc = True
+xmlrpc_interface = 127.0.0.1
+xmlrpc_port = 8050
+longpolling_port = 8051
+
+#===== for security =============
+;dbfilter = youssef_live
+;list_db = false
+proxy_mode = true
+;============= Multi processing =================
+workers = 2
+max_cron_threads = 1
+
+;Maximum allowed virtual memory per worker, when reached, any memory allocation will fail (default 805306368 aka 768MB).
+; ( set to 2 GB)
+limit_memory_hard = 8000000000
+
+;Maximum allowed virtual memory per worker, when reached the worker will be reset after the current request (default 671088640 aka 640MB).;
+; ( set to 2 GB)
+limit_memory_soft = 5000000000
+
+;Maximum number of request to be processed per worker (default 8192).
+limit_request = 20000
+
+;Maximum allowed CPU time per request (default 60).
+limit_time_cpu = 3600
+
+;Maximum allowed Real time per request (default 120).
+limit_time_real = 3600
+
+;=================================================
+pidfile = /opt/odoo15/run/youssef.pid
+
+logfile = /var/log/odoo/youssef.log
+log_level = info
+logrotate = true

@@ -1,0 +1,20 @@
+[Unit]
+Description=youssef odoo15-youssef instance
+Requires=postgresql.service
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+#SyslogIdentifier=hawary
+PermissionsStartOnly=true
+User=youssef
+Group=odoo
+ExecStart=/usr/bin/youssef /opt/odoo15/odoo-bin -c /etc/odoo/youssef.conf --logfile /var/log/odoo/youssef.log
+ExecReload=/bin/kill -HUP /opt/odoo15/run/youssef.pid
+KillMode=mixed
+KillSignal=SIGKILL
+#StandardOutput=journal+console
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
